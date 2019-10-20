@@ -5,6 +5,7 @@ import cdk = require('@aws-cdk/core');
 import lambda = require('@aws-cdk/aws-lambda');
 import apigw = require('@aws-cdk/aws-apigateway');
 import { HitCounter } from './hitcounter';
+import { TableViewer } from 'cdk-dynamo-table-viewer';
 
 // This is the App Definition class created by the entry point in bin folder
 export class AwsCdkWorkshopStack extends cdk.Stack {
@@ -43,7 +44,10 @@ export class AwsCdkWorkshopStack extends cdk.Stack {
     // aws lambda add-permission --function-name [funcArn] --source-arn [GatewayArn] --principal apigateway.amazonaws.com --statement-id statement-id-guid --action lambda:InvokeFunction
     // aws lambda add-permission --function-name arn:aws:lambda:ap-southeast-2:366072108453:function:AwsCdkWorkshopStack-HelloHitCouterHitsCounterHandl-1C1DNVXQVFAAX --source-arn arn:aws:execute-api:ap-southeast-2:366072108453:api-id/*/GET/lambdasv1 --principal apigateway.amazonaws.com --statement-id statement-id-guid --action lambda:InvokeFunction --profile mit-house
     
-    // gateway.deploymentStage.
+    new TableViewer( this, 'ViewHitCounter', {
+      title: 'Hello Hits',
+      table: helloWithCouter.table,
+    });
 
   }
 }
