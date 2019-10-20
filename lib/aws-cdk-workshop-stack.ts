@@ -28,7 +28,7 @@ export class AwsCdkWorkshopStack extends cdk.Stack {
     // });
 
     // defines an API Gateway Rest API resource backed by the 'Hello' function above - https://docs.aws.amazon.com/cdk/api/latest/docs/aws-apigateway-readme.html
-    const gateway = new apigw.LambdaRestApi(this, 'Endpoint', {
+    const gateway = new apigw.LambdaRestApi(this, 'ApiEndpoint', {
       handler: helloWithCouter.handler,
       deployOptions: {
         loggingLevel: apigw.MethodLoggingLevel.INFO,
