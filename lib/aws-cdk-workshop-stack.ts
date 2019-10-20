@@ -47,6 +47,7 @@ export class AwsCdkWorkshopStack extends cdk.Stack {
     new TableViewer( this, 'ViewHitCounter', {
       title: 'Hello Hits',
       table: helloWithCouter.table,
+      sortBy: '-hits'
     });
 
   }
