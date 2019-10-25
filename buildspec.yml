@@ -11,8 +11,11 @@ phases:
   build:
     commands:
       - echo Build started on `date`
+      - echo Installing npm packages...
       - npm i
+      - echo Running compile from typscript to javascript...
       - npm run build
+      - echo done build
   post_build:
     commands:
       - echo Build completed on `date`
