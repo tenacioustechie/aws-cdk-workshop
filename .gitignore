@@ -3,6 +3,9 @@
 *.d.ts
 node_modules
 
+# include JS lambda assets
+!lambda/*.js
+
 # CDK asset staging directory
 .cdk.staging
 cdk.out
