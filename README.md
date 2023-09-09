@@ -29,6 +29,18 @@ cdk diff
 
 ```
 
+# Hotswap Development deployment of lambda functions
+
+```bash
+# use this command to deploy updated lambda function code
+cdk deploy --hotswap
+
+# use this to deploy continuously using --hotswap option
+cdk watch
+# you can use the watch setting to included and exclude changes from watch deploy operations
+# https://cdkworkshop.com/20-typescript/30-hello-cdk/300-cdk-watch.html
+```
+
 # Resources
 
 - CDK Workshop (this was built using the workshop) https://cdkworkshop.com/20-typescript/30-hello-cdk/200-lambda.html

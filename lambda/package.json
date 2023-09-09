@@ -1,0 +1,10 @@
+{
+  "name": "hit-counter",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {},
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.408.0",
+    "@aws-sdk/client-lambda": "^3.408.0"
+  }
+}
