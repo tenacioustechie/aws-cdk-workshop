@@ -1,4 +1,4 @@
-import { AwsCdkWorkshopStack } from "./aws-cdk-workshop-stack";
+import { CdkWorkshopStack } from "./cdk-workshop-stack";
 import { Stage, StageProps } from "aws-cdk-lib";
 import { Construct } from "constructs";
 
@@ -6,6 +6,6 @@ export class WorkshopPipelineStage extends Stage {
   constructor(scope: Construct, id: string, props?: StageProps) {
     super(scope, id, props);
 
-    new AwsCdkWorkshopStack(this, "WebService");
+    new CdkWorkshopStack(this, "WebService");
   }
 }
