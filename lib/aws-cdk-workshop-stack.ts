@@ -6,9 +6,10 @@ import * as cdk from "aws-cdk-lib";
 import * as apigw from "aws-cdk-lib/aws-apigateway";
 import { HitCounter } from "./hit-counter";
 import { TableViewer } from "cdk-dynamo-table-viewer";
+import { Construct } from "constructs";
 
 export class AwsCdkWorkshopStack extends cdk.Stack {
-  constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
+  constructor(scope: Construct, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
     // Create SQS Queue
